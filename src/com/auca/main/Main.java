@@ -72,8 +72,7 @@ public class Main {
                     default -> System.out.println("Invalid menu option.");
                 }
             } catch (ValidationException | DuplicateRecordException |
-                     RecordNotFoundException | PrerequisiteMissingException |
-                     BookUnavailableException e) {
+                     RecordNotFoundException | BookUnavailableException e) {
                 System.out.println("Error: " + e.getMessage());
             } catch (DateTimeParseException | NumberFormatException e) {
                 System.out.println("Invalid input format. Please try again.");
@@ -253,7 +252,7 @@ public class Main {
     }
 
     private static void registerDepartment()
-            throws ValidationException, DuplicateRecordException {
+            throws ValidationException, DuplicateRecordException, RecordNotFoundException {
 
         System.out.println("\n--- REGISTER DEPARTMENT ---");
 
